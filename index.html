@@ -8,7 +8,7 @@
 		<!-- Jquery/Ajax -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<!-- Javascript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -21,11 +21,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
-
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/regular.css" integrity="sha384-hCIN6p9+1T+YkCd3wWjB5yufpReULIPQ21XA/ncf3oZ631q2HEhdC7JgKqbk//4+" crossorigin="anonymous">
-
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/b447306033.js" crossorigin="anonymous"></script>
 
 		<link rel= "stylesheet" type="text/css" href= "index.css"/>
 	<title>Test</title>
@@ -35,36 +31,99 @@
 		<div class="title_section">
 			<h1>Title of Website</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+			<div class="socials">
+				<i class="fa-brands fa-facebook-f"></i>
+				<i class="fa-brands fa-twitter"></i>
+				<i class="fa-brands fa-instagram"></i>	
+			</div>
+
+			<div class="reviews">
+				<div class="review">
+					<div class="avatar"></div>
+					<p class="desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit." <br>-Elliot</p>
+				</div>
+
+				<div class="review">
+					<div class="avatar"></div>
+					<p class="desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit." -Daryl</p>
+				</div>
+
+				<div class="review">
+					<div class="avatar"></div>
+					<p class="desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit." -Steven</p>
+				</div>
+
+				<div class="review">
+					<div class="avatar"></div>
+					<p class="desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit." -George</p>
+				</div>
+
+				<div class="review">
+					<div class="avatar"></div>
+					<p class="desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit." -Jenny</p>
+				</div>
+			</div>
+
+			<i id="down" class="fa-solid fa-arrow-down"></i>
 		</div>
 
 		<div class="section" id="desert">
 			<div class="intro">
-				<h1>Section One</h1>
-				<p class="desc">
-					description of the current section, talking about what this section is about and stuff like, im just filling in text at this point.
-				</p>
+				<h1 class="title">Section One</h1>
 			</div>
 
 			<div class="product">
 				<div class="details">
-					<div class="image"></div>
+					<i class="fa-solid fa-leaf" style="color: rgba(0,0,0,0);"></i>
+					<img src="cookie.png" class="image">
 					<h2>Product #1</h2>
-					<h4>$5.99 each</h4>
 				</div>
-				<p class="desc">Description of the product, and why its so amazing, so we can take the customers money.</p>
+				<div class="details">
+					<p class="desc">"Description of the product, and why its so amazing."</p>
+					<button>$1.99 each</button>
+				</div>
 			</div>
 
 			<div class="product">
 				<div class="details">
-					<div class="image"></div>
+					<i class="fa-solid fa-leaf"></i>
+					<img src="cookie2.png" class="image">
 					<h2>Product #2</h2>
-					<h4>$5.99 each</h4>
 				</div>
-				<p class="desc">Description of the product, and why its so amazing, so we can take the customers money.</p>
+				<div class="details">
+					<p class="desc">"Description of the product, and why its so amazing."</p>
+					<button>$1.99 each</button>
+				</div>	
 			</div>
-		</div>
+
+			<script type="text/javascript">
+				node = document.getElementsByClassName("product")[0];
+				node2 = document.getElementsByClassName("product")[1];
+
+				for (var i = 0; i < 3; i++) {
+					clone = node.cloneNode(true);
+					document.getElementById("desert").appendChild(clone);
+					clone = node2.cloneNode(true);
+					document.getElementById("desert").appendChild(clone);
+				}
+			</script>
 
 		<div class="section" id="savory">
+			<div class="intro">
+				<h1>Section Two</h1>
+			</div>
+
+			<script type="text/javascript">
+				node = document.getElementsByClassName("product")[0];
+				node2 = document.getElementsByClassName("product")[1];
+
+				for (var i = 0; i < 4; i++) {
+					clone = node.cloneNode(true);
+					document.getElementById("savory").appendChild(clone);
+					clone = node2.cloneNode(true);
+					document.getElementById("savory").appendChild(clone);
+				}
+			</script>
 		</div>
 	</body>
 </html>
